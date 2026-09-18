@@ -53,42 +53,42 @@
 
     // 全32種類の分岐進化ツリー
     const KUMMANI_STAGES = {
-      1: { id: 1, name: "幼熊(コグマニ)", emoji: "🧸", reqExp: 0, next: [2] },
-      2: { id: 2, name: "熊兄(クッマーニ)", emoji: "🐻", reqExp: 3, next: [3, 4] },
+      1: { id: 1, name: "幼熊(ヨウシオン)", emoji: "🧸", reqExp: 0, next: [2] },
+      2: { id: 2, name: "熊兄(シォンシォン)", emoji: "🐻", reqExp: 3, next: [3, 4] },
       // Lv3
-      3: { id: 3, name: "熊飛燕(クマヒエン)", emoji: "🥋", reqExp: 8, next: [5, 6] },
-      4: { id: 4, name: "熊太極(クマタイキョク)", emoji: "☯️", reqExp: 8, next: [7, 8] },
+      3: { id: 3, name: "熊飛燕(シォンフェイイェン)", emoji: "🥋", reqExp: 8, next: [5, 6] },
+      4: { id: 4, name: "熊太極(シォンタイジー)", emoji: "☯️", reqExp: 8, next: [7, 8] },
       // Lv4
-      5: { id: 5, name: "熊麗華(クマレイカ)", emoji: "🌸", reqExp: 15, next: [9, 10] },
-      6: { id: 6, name: "熊雷神(クマライジン)", emoji: "⚡", reqExp: 15, next: [11, 12] },
-      7: { id: 7, name: "熊武神(クマブシン)", emoji: "🔱", reqExp: 15, next: [13, 14] },
-      8: { id: 8, name: "熊龍巻(クマタツマキ)", emoji: "🌪️", reqExp: 15, next: [15, 16] },
+      5: { id: 5, name: "熊麗華(シォンリーホワ)", emoji: "🌸", reqExp: 15, next: [9, 10] },
+      6: { id: 6, name: "熊雷神(シォンレイシェン)", emoji: "⚡", reqExp: 15, next: [11, 12] },
+      7: { id: 7, name: "熊武神(シォンウーシェン)", emoji: "🔱", reqExp: 15, next: [13, 14] },
+      8: { id: 8, name: "熊龍巻(シォンロンジュエン)", emoji: "🌪️", reqExp: 15, next: [15, 16] },
       // Lv5
-      9: { id: 9, name: "熊炎華(クマエンカ)", emoji: "🔥", reqExp: 25, next: [17, 18] },
-      10: { id: 10, name: "熊氷月(クマヒョウゲツ)", emoji: "❄️", reqExp: 25, next: [19, 20] },
-      11: { id: 11, name: "熊風皇(クマフウオウ)", emoji: "🍃", reqExp: 25, next: [21, 22] },
-      12: { id: 12, name: "熊地龍(クマチリュウ)", emoji: "🐉", reqExp: 25, next: [23, 24] },
-      13: { id: 13, name: "熊天翔(クマテンショウ)", emoji: "👼", reqExp: 25, next: [25, 26] },
-      14: { id: 14, name: "熊海神(クマカイジン)", emoji: "🌊", reqExp: 25, next: [27, 28] },
-      15: { id: 15, name: "熊星閃(クマセイセン)", emoji: "⭐", reqExp: 25, next: [29, 30] },
-      16: { id: 16, name: "熊幻影(クマゲンエイ)", emoji: "🌫️", reqExp: 25, next: [31, 32] },
+      9: { id: 9, name: "熊炎華(シォンイェンホワ)", emoji: "🔥", reqExp: 25, next: [17, 18] },
+      10: { id: 10, name: "熊氷月(シォンビンユエ)", emoji: "❄️", reqExp: 25, next: [19, 20] },
+      11: { id: 11, name: "熊風皇(シォンフォンホワン)", emoji: "🍃", reqExp: 25, next: [21, 22] },
+      12: { id: 12, name: "熊地龍(シォンディーロン)", emoji: "🐉", reqExp: 25, next: [23, 24] },
+      13: { id: 13, name: "熊天翔(シォンティエンシャン)", emoji: "👼", reqExp: 25, next: [25, 26] },
+      14: { id: 14, name: "熊海神(シォンハイシェン)", emoji: "🌊", reqExp: 25, next: [27, 28] },
+      15: { id: 15, name: "熊星閃(シォンシンシャン)", emoji: "⭐", reqExp: 25, next: [29, 30] },
+      16: { id: 16, name: "熊幻影(シォンホァンイン)", emoji: "🌫️", reqExp: 25, next: [31, 32] },
       // Lv6 (最終形態 16種) - nextを空にする
-      17: { id: 17, name: "熊覇天炎華(クマハテンエンカ)", emoji: "💥", reqExp: 40, next: [] },
-      18: { id: 18, name: "熊極煉獄(クマキョクレンゴク)", emoji: "🌋", reqExp: 40, next: [] },
-      19: { id: 19, name: "熊零度氷月(クマネロドヒョウゲツ)", emoji: "🧊", reqExp: 40, next: [] },
-      20: { id: 20, name: "熊白雪絶影(クマシラユキゼツエイ)", emoji: "🌨️", reqExp: 40, next: [] },
-      21: { id: 21, name: "熊暴風覇王(クマボウフウハオウ)", emoji: "🌀", reqExp: 40, next: [] },
-      22: { id: 22, name: "熊神風天狗(クマシンプウテング)", emoji: "👺", reqExp: 40, next: [] },
-      23: { id: 23, name: "熊大地震神(クマダイジシンシン)", emoji: "⛰️", reqExp: 40, next: [] },
-      24: { id: 24, name: "熊金剛不壊(クマコンゴウフエ)", emoji: "🛡️", reqExp: 40, next: [] },
-      25: { id: 25, name: "熊天帝飛翔(クマテンテイヒショウ)", emoji: "🦅", reqExp: 40, next: [] },
-      26: { id: 26, name: "熊光速星雲(クマコウソクセイウン)", emoji: "✨", reqExp: 40, next: [] },
-      27: { id: 27, name: "熊深淵海王(クマシンエンカイオウ)", emoji: "🐙", reqExp: 40, next: [] },
-      28: { id: 28, name: "熊水魔大帝(クマスイマタイテイ)", emoji: "🔱", reqExp: 40, next: [] },
-      29: { id: 29, name: "熊銀河爆砕(クマギンガバクサイ)", emoji: "🌌", reqExp: 40, next: [] },
-      30: { id: 30, name: "熊流星暗殺(クマリュウセイアンサツ)", emoji: "🌠", reqExp: 40, next: [] },
-      31: { id: 31, name: "熊無双幻月(クマムソウゲンゲツ)", emoji: "🌙", reqExp: 40, next: [] },
-      32: { id: 32, name: "熊混沌神魔(クマコントンシンマ)", emoji: "😈", reqExp: 40, next: [] },
+      17: { id: 17, name: "熊覇天炎華(シォンバーティエンイェンホワ)", emoji: "💥", reqExp: 40, next: [] },
+      18: { id: 18, name: "熊極煉獄(シォンジーリェンユー)", emoji: "🌋", reqExp: 40, next: [] },
+      19: { id: 19, name: "熊零度氷月(シォンリーンドゥビンユエ)", emoji: "🧊", reqExp: 40, next: [] },
+      20: { id: 20, name: "熊白雪絶影(シォンバイシュエジュエイン)", emoji: "🌨️", reqExp: 40, next: [] },
+      21: { id: 21, name: "熊暴風覇王(シォンバオフォンバーワン)", emoji: "🌀", reqExp: 40, next: [] },
+      22: { id: 22, name: "熊神風天狗(シォンシェンフォンティエンゴウ)", emoji: "👺", reqExp: 40, next: [] },
+      23: { id: 23, name: "熊大地震神(シォンダージーヂェンシェン)", emoji: "⛰️", reqExp: 40, next: [] },
+      24: { id: 24, name: "熊金剛不壊(シォンジンガンブーフワイ)", emoji: "🛡️", reqExp: 40, next: [] },
+      25: { id: 25, name: "熊天帝飛翔(シォンティエンディーフェイシャン)", emoji: "🦅", reqExp: 40, next: [] },
+      26: { id: 26, name: "熊光速星雲(シォングアンスーシンユン)", emoji: "✨", reqExp: 40, next: [] },
+      27: { id: 27, name: "熊深淵海王(シォンシェンユエンハイワン)", emoji: "🐙", reqExp: 40, next: [] },
+      28: { id: 28, name: "熊水魔大帝(シォンシュイモウダーディー)", emoji: "🔱", reqExp: 40, next: [] },
+      29: { id: 29, name: "熊銀河爆砕(シォンインハーバオスゥイ)", emoji: "🌌", reqExp: 40, next: [] },
+      30: { id: 30, name: "熊流星暗殺(シォンリウシンアンシャー)", emoji: "🌠", reqExp: 40, next: [] },
+      31: { id: 31, name: "熊無双幻月(シォンウーシュアンホァンユエ)", emoji: "🌙", reqExp: 40, next: [] },
+      32: { id: 32, name: "熊混沌神魔(シォンフントゥンシェンモー)", emoji: "😈", reqExp: 40, next: [] },
     };
 
     const DISHES = [
@@ -594,7 +594,7 @@
             const newHelpers = [...helpers, currentStage];
             const nextLevel = 1; // コグマニに戻る
             const nextStage = KUMMANI_STAGES[nextLevel];
-            setFeedEffect({ phase: 'evolving', from: currentStage, to: nextStage, message: "新しい 幼熊(コグマニ) がうまれた！" });
+            setFeedEffect({ phase: 'evolving', from: currentStage, to: nextStage, message: "新しい 幼熊(ヨウシオン) がうまれた！" });
             setTimeout(() => {
               saveProgress(totalCoins, newItems, nextLevel, 0, newHelpers, newDishes);
               setFeedEffect({ phase: 'evolved', to: nextStage, message: "なかま が ふえたよ！" });
